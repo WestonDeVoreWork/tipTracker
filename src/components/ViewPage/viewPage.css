@@ -4,25 +4,29 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
 
     background-attachment: fixed;
 }
 
-.logView {
+/* .logView { */
     /* background-color: rgba( 47, 72, 159, .6); */
-}
+/* } */
 
 .table {
     color: lightgray
 }
 
 .tipLogs {
-    width: 40%;
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .mileLogs {
-    width: 40%;
+    width: 100%;
+    padding-left: 3%;
+    padding-right: 3%;
 }
 
 .logMainDiv {
@@ -30,11 +34,40 @@
     background-color: rgba( 47, 72, 159, .6);
 }
 
+.viewPageFormLabel {
+    font: 36px "Ramaraja";
+    border: 7px solid white;
+    background-color: #DA4545;
+    width: 100%;
+    
+    text-align: center;
+}
+
+.deleteFormLabel {
+    font: 22px "Ramaraja";
+    border: 4px solid white;
+    background-color: #45C8D9;
+    width: 80%;
+    text-align: left;
+    padding: 10px;
+}
+
 .logViewBackground {
     display: inline-block
 }
 
 .deleteForms {
-    display: inline-block;
+    display:grid ;
+    float: right;
     align-items: right;
+    padding: 10px;
+    height: 50%;
+}
+
+.viewPageInput{
+    width: 80%;
+    text-align: center;
+    background-color: lightgray;
+    border: lightgray;
+    font-size: 20px;
 }

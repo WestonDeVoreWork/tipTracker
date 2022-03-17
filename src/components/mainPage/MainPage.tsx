@@ -1,11 +1,13 @@
 import React from "react";
 import LoginSignup from "../LoginSignup/LoginSignup";
+import Logout from "../Logout/Logout";
 
 import "./mainPage.css"
 
 interface MainPageProps {
     sessionToken: string,
-    setSessionToken: any
+    setSessionToken: any,
+    clearLocalStorage: any
 }
  
 interface MainPageState {
@@ -33,7 +35,10 @@ class MainPage extends React.Component<MainPageProps, MainPageState> {
                     </div>
         
                     <div className='registerLoginAccount'>
-                        <LoginSignup sessionToken={this.state.sessionToken} setSessionToken={this.props.setSessionToken}/>
+                        {/* { this.props.sessionToken ?  */}
+                            <LoginSignup sessionToken={this.state.sessionToken} setSessionToken={this.props.setSessionToken} /> 
+                            <Logout clearLocalStorage={this.props.clearLocalStorage}/>
+                        {/* } */}
                     </div>
                 </div>
             </div>

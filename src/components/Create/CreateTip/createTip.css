@@ -4,7 +4,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
 
     background-attachment: fixed;
 }
@@ -14,6 +14,13 @@
     padding: 10px;
     padding-bottom: 20px;
     color: black;
+}
+
+.responsePara {
+    font: 72px "Ramaraja";
+    color:white;
+    font-style: italic;
+    text-decoration: underline;
 }
 
 .createtipFormDiv {

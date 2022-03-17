@@ -4,7 +4,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
 
     background-attachment: fixed;
 }
@@ -40,4 +40,5 @@
     background-color: #45C8D9;
     /* font:"Ramaraja" */
     display: inline-grid;
+    
 }

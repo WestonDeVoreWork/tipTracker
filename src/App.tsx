@@ -30,6 +30,11 @@ class App extends Component < SessionProps, SessionState > {
     })
   }
 
+  clearLocalStorage = () => {
+    localStorage.clear()
+    this.setSessionToken("")
+  }
+
   componentDidMount() {
     if(localStorage.getItem('token')){
       let token = localStorage.getItem('token')
@@ -42,7 +47,7 @@ class App extends Component < SessionProps, SessionState > {
     return (
       <div className="App">
         <Router>
-          <Navbar sessionToken={this.state.sessionToken} setSessionToken={this.setSessionToken} />
+          <Navbar sessionToken={this.state.sessionToken} setSessionToken={this.setSessionToken} clearLocalStorage={this.clearLocalStorage}/>
         </Router>
       </div>
     )

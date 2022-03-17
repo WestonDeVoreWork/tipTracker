@@ -29,7 +29,7 @@ class CreateMile extends React.Component<CreateMileProps, CreateMileState> {
             CostOfGas: 0,
             GallonsOfGasUsed: 0,
             date: "",
-            
+
             response: ""
      };
     }
@@ -37,8 +37,8 @@ class CreateMile extends React.Component<CreateMileProps, CreateMileState> {
 
     handleSubmit = (event:any) => {
         event.preventDefault();
-        console.log(APIURL + Endpoints.tips.create);
-        console.log(this.props.sessionToken)
+        console.log(APIURL + Endpoints.mile.create);
+        console.log(`Session Token: ${this.props.sessionToken}`)
         let reqObj = {
             StartingMileage: this.state.StartingMileage,
             EndingMileage: this.state.EndingMileage,
@@ -57,7 +57,11 @@ class CreateMile extends React.Component<CreateMileProps, CreateMileState> {
                 Authorization: `Bearer ${this.props.sessionToken}`
             })
         }) .then (res => res.json())
-        .then((data) => console.log(data))
+        // .then((data) => console.log(data))
+        .then((data) => {
+            console.log(data);
+            this.setState({ response: `Mileage ${data.message}` })
+        })
         .catch((err) => console.log(err))
     }
 
@@ -73,7 +77,7 @@ class CreateMile extends React.Component<CreateMileProps, CreateMileState> {
                     <form onSubmit={this.handleSubmit}>
                         <fieldset>
 
-                            <br />
+                            <br/>
 
                             <div>
                                 <label className="createMileFormLabel">Starting Mileage:</label>
@@ -89,8 +93,6 @@ class CreateMile extends React.Component<CreateMileProps, CreateMileState> {
                                 StartingMileage: parseInt(e.target.value)
                             })} /* onInput={this.updateMilesDriven} */ />
 
-                            <br />
-
                             <div>
                                 <label className="createMileFormLabel">Ending Mileage:</label>
                             </div>
@@ -104,8 +106,6 @@ class CreateMile extends React.Component<CreateMileProps, CreateMileState> {
                             onChange={(e) => this.setState({
                                 EndingMileage: parseInt(e.target.value)
                             })} /* onInput={this.updateMilesDriven} */ />
-
-                            <br />
 
                             <div>
                                 <label className="createMileFormLabel">Miles Driven:</label>
@@ -122,7 +122,20 @@ class CreateMile extends React.Component<CreateMileProps, CreateMileState> {
                                 MilesDriven: parseInt(e.target.value)
                             })} />
 
-                            <br />
+                            <div>
+                                <label className="createMileFormLabel">Gallons of Gas Used:</label>
+                                {/* <h3>{this.state.MilesDriven}</h3> */}
+                            </div>
+
+                            <input id="GallonsOfGasUsed"
+                            className="createMileInput" 
+                            name="GallonsOfGasUsed" 
+                            placeholder="Ex: 11:45"
+                            type="text"
+                            value={this.state.GallonsOfGasUsed} 
+                            onChange={(e) => this.setState({
+                                GallonsOfGasUsed: parseInt(e.target.value)
+                            })} />
 
                             <div>
                                 <label className="createMileFormLabel">Date (YYYY-MM-DD):</label>
@@ -144,6 +157,8 @@ class CreateMile extends React.Component<CreateMileProps, CreateMileState> {
                     <br />
                     </form>
                 </div>
+
+                <p className="responsePara">{this.state.response}</p>
 
             </div>
          

@@ -25,6 +25,7 @@ import UpdateMile from '../Update/UpdateMile/UpdateMile';
 interface NavbarProps {
     sessionToken: string,
     setSessionToken: any
+    clearLocalStorage: any
 }
 
 interface NavbarState {
@@ -119,12 +120,6 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
               </a>
             </li>
           </Link>
-
-          {/* <Link to="/contact">
-                        <li class="nav-item">
-                        <a class="nav-link">Contact Me</a>
-                        </li>
-                    </Link> */}
         </ul>
       </div>
     </div>
@@ -132,8 +127,8 @@ class Navbar extends React.Component<NavbarProps, NavbarState> {
 </div>
                     <div>
                         <Routes>
-                            <Route path='/MainPage' element={<MainPage sessionToken={this.props.sessionToken} setSessionToken={this.props.setSessionToken} />}></Route>
-                            <Route path='/' element={<MainPage sessionToken={this.props.sessionToken} setSessionToken={this.props.setSessionToken}/>}></Route>
+                            <Route path='/MainPage' element={<MainPage sessionToken={this.props.sessionToken} setSessionToken={this.props.setSessionToken} clearLocalStorage={this.props.clearLocalStorage} />}></Route>
+                            <Route path='/' element={<MainPage sessionToken={this.props.sessionToken} setSessionToken={this.props.setSessionToken} clearLocalStorage={this.props.clearLocalStorage} />}></Route>
                             <Route path='/LogTips' element={<CreateTip sessionToken={this.props.sessionToken} />}></Route>
                             <Route path='/LogMileage' element={<CreateMile sessionToken={this.props.sessionToken}/>}></Route>
                             <Route path='/LoginSignup' element={<LoginSignup sessionToken={this.props.sessionToken} setSessionToken={this.props.setSessionToken} />}></Route>

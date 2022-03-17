@@ -8,14 +8,16 @@ export const Endpoints = {
         getId: 'tips/:id',
         getAll: 'tips/',
         update: 'tips/',
-        delete: 'tips/'
+        delete: 'tips/',
+        getMine: 'tips/mine'
     },
     mile: {
         create: 'mile/create',
         getAll: 'mile/',
         getId: 'mile/:id',
         update: 'mile/',
-        delete: 'mile/'
+        delete: 'mile/',
+        getMine: 'mile/mine'
     }
 }
 

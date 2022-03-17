@@ -16,6 +16,8 @@ interface CreateTipState {
     TotalTimeDelivering: string,
     IncomePerHour: number,
     date: string,
+
+    response: string
 }
 
  
@@ -31,6 +33,8 @@ class CreateTip extends React.Component<CreateTipProps, CreateTipState> {
             TotalTimeDelivering: "",
             IncomePerHour: 0,
             date: "",
+
+            response: ""
      };
     }
 
@@ -38,7 +42,7 @@ class CreateTip extends React.Component<CreateTipProps, CreateTipState> {
     handleSubmit = (event:any) => {
         event.preventDefault();
         console.log(APIURL + Endpoints.tips.create);
-        // console.log(this.props.sessionToken)
+        console.log(this.props.sessionToken)
         let reqObj = {
             TotalIncomeFromTips: this.state.TotalIncomeFromTips,
             NumberOfTipsReceived: this.state.NumberOfTipsReceived,
@@ -59,7 +63,11 @@ class CreateTip extends React.Component<CreateTipProps, CreateTipState> {
                 Authorization: `Bearer ${this.props.sessionToken}`
             })
         }) .then (res => res.json())
-        .then((data) => console.log(data))
+        // .then((data) => console.log(data))
+        .then((data) => {
+            console.log(data);
+            this.setState({ response: `Tip ${data.message}` })
+        })
         .catch((err) => console.log(err))
     }
 
@@ -182,6 +190,8 @@ class CreateTip extends React.Component<CreateTipProps, CreateTipState> {
                     </form>
                     <br />
                 </div>
+
+                <p className="responsePara">{this.state.response}</p>
 
             </div>
          

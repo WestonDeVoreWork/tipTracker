@@ -5,6 +5,13 @@
     padding-right: 20px;
 }
 
+.responseParaSmall {
+    font: 30px "Ramaraja";
+    color:white;
+    font-style: italic;
+    text-decoration: underline;
+}
+
 .FormLabel {
     font: 24px "Ramaraja";
     border: 7px solid white;

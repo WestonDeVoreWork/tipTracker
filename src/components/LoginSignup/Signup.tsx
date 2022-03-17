@@ -20,6 +20,8 @@ import { APIURL, Endpoints } from '../endpoints';
 interface SignupProps {
     sessionToken: string,
     setSessionToken: any
+
+    setResponse: any
 }
 
 interface SignupState {
@@ -30,8 +32,8 @@ interface SignupState {
     isAdmin: boolean,
     showPassword: boolean,
 
-    sessionToken: string,
-    setSessionToken: any
+    // sessionToken: string,
+    // setSessionToken: any
 }
 
 // interface SignupProps {
@@ -54,8 +56,8 @@ class Signup extends Component <SignupProps , SignupState> {
             isAdmin: false,
             showPassword: false,
 
-            sessionToken: "", 
-            setSessionToken: ""
+            // sessionToken: "", 
+            // setSessionToken: ""
         };
     }
 
@@ -125,7 +127,6 @@ class Signup extends Component <SignupProps , SignupState> {
             Occupation: this.state.Occupation,
             isAdmin: this.state.isAdmin
         }
-
         fetch(APIURL + Endpoints.user.register, {
             method: "POST",
             body: JSON.stringify(reqObj),
@@ -133,7 +134,11 @@ class Signup extends Component <SignupProps , SignupState> {
                 'Content-Type': 'application/json',
             })
         }) .then (res => res.json())
-        .then((data) => console.log(data.sessionToken))
+        .then((data) => {
+            this.props.setSessionToken(
+                data.sessionToken);
+                this.props.setResponse(data.message)
+            })
         // .then((data) => this.props.setSessionToken(data.sessionToken))
         .catch((err) => console.log(err))
     }

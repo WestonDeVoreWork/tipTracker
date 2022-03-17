@@ -58,7 +58,10 @@ class UpdateMile extends React.Component< UpdateMileProps, UpdateMileState> {
                 Authorization: `Bearer ${this.props.sessionToken}`
             })
         }) .then (res => res.json())
-        .then((data) => console.log(data))
+        .then((data) => {
+            console.log(data);
+            this.setState({ response: `${data.message}` })
+        })
         .catch((err) => console.log(err))
     }
 

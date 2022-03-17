@@ -1,5 +1,14 @@
 .App {
   text-align: center;
+
+  background-image: url("./assets/graphingpaper2.jfif");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    background-attachment: fixed;
 }
 
 .App-logo {

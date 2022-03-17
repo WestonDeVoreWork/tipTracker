@@ -6,7 +6,9 @@ import "./loginSignup.css"
 
 interface LoginProps {
     sessionToken: string,
-    setSessionToken: any
+    setSessionToken: any,
+    
+    setResponse: any
 }
 
 // future stretch goal: showPass toggle button
@@ -88,8 +90,11 @@ class Login extends Component <LoginProps , LoginState> {
             })
         }) .then (res => res.json())
         // .then((data) => console.log(data.sessionToken))
-        .then((data) => this.props.setSessionToken(
-            data.sessionToken))
+        .then((data) => {
+            this.props.setSessionToken(
+            data.sessionToken);
+            this.props.setResponse(data.message)
+        })
         .catch((err) => console.log(err))
     }
 

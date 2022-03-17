@@ -14,7 +14,9 @@ interface UpdateTipState {
     EndingTime: string,
     TotalTimeDelivering: string,
     date: string,
-    tipId: string
+    tipId: string,
+
+    response: string
 }
 
  
@@ -28,7 +30,9 @@ class UpdateTip extends React.Component< UpdateTipProps, UpdateTipState> {
             EndingTime: "",
             TotalTimeDelivering: "",
             date: "",
-            tipId: ""
+            tipId: "",
+
+            response: ""
      };
     }
 
@@ -54,7 +58,10 @@ class UpdateTip extends React.Component< UpdateTipProps, UpdateTipState> {
                 Authorization: `Bearer ${this.props.sessionToken}`
             })
         }) .then (res => res.json())
-        .then((data) => console.log(data))
+        .then((data) => {
+            console.log(data);
+            this.setState({ response: `${data.message}` })
+        })
         .catch((err) => console.log(err))
     }
 
