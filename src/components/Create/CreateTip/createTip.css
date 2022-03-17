@@ -1,0 +1,48 @@
+.createTipMainDiv{
+    background-image: url("../../../assets/graphingpaper2.jfif");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    background-attachment: fixed;
+}
+
+.createTipTitle {
+    font: 72px "Rampart One";
+    padding: 10px;
+    padding-bottom: 20px;
+    color: black;
+}
+
+.createtipFormDiv {
+    background-color: #45C8D9;
+    display:inline;
+}
+
+.createTipTitleDiv {
+    background-color: white;
+    opacity: 70%;
+}
+
+/* .createTipForm {
+    background-color: #45C8D9;
+    display:inline-block;
+} */
+
+.createTipInput {
+    width: 80%;
+    text-align: center;
+    background-color: lightgray;
+    border: lightgray;
+    font-size: 20px;
+}
+
+.createTipFormLabel {
+    font: 36px "Ramaraja";
+    border: 7px solid white;
+    background-color: #45C8D9;
+    width: 80%;
+    text-align: left;
+}

@@ -1,0 +1,43 @@
+.mainPageMainDiv {
+    background-image: url("../../assets/graphingpaper2.jfif");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    background-attachment: fixed;
+}
+
+.mainPageDiv {
+    /* display: inline-grid; */
+    /* width: 50%; */
+    align-items: center;
+}
+
+.mainPageTitleBackground {
+    background-color: whitesmoke;
+    opacity: 70%;
+}
+
+.mainPageTitle {
+    font: 72px "Rampart One";
+    padding: 10px;
+    padding-bottom: 20px;
+    color: black;
+}
+
+.aboutUs {
+    color: white;
+    background-color: #DA4545;
+    font: 28px "Ramaraja";
+    width: 40%;
+    line-height: 50px;
+    display: inline-grid;
+}
+
+.registerLoginAccount {
+    background-color: #45C8D9;
+    /* font:"Ramaraja" */
+    display: inline-grid;
+}

@@ -1,0 +1,40 @@
+.viewPageMainDiv {
+    background-image: url("../../assets/graphingpaper2.jfif");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    background-attachment: fixed;
+}
+
+.logView {
+    /* background-color: rgba( 47, 72, 159, .6); */
+}
+
+.table {
+    color: lightgray
+}
+
+.tipLogs {
+    width: 40%;
+}
+
+.mileLogs {
+    width: 40%;
+}
+
+.logMainDiv {
+    text-align: center;
+    background-color: rgba( 47, 72, 159, .6);
+}
+
+.logViewBackground {
+    display: inline-block
+}
+
+.deleteForms {
+    display: inline-block;
+    align-items: right;
+}

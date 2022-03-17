@@ -1,0 +1,26 @@
+.LoginSignupTitle {
+    font: 36px "Ramaraja";
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.FormLabel {
+    font: 24px "Ramaraja";
+    border: 7px solid white;
+    background-color: white;
+    width: 80%;
+    text-align: left;
+}
+
+.loginSignupInput {
+    width: 80%;
+    text-align: center;
+    background-color: lightgray;
+    border: lightgray;
+}
+
+.loginSignupButton {
+        width: 80%;
+        text-align: center;
+}

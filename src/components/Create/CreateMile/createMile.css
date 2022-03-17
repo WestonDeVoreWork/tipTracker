@@ -1,0 +1,43 @@
+.createMileMainDiv{
+    background-image: url("../../../assets/graphingpaper2.jfif");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    background-attachment: fixed;
+}
+
+.createMileTitle {
+    font: 72px "Rampart One";
+    padding: 10px;
+    padding-bottom: 20px;
+    color: black;
+}
+
+.createMileFormDiv {
+    background-color: #45C8D9;
+    display: inline;
+}
+
+.createMileTitleDiv {
+    background-color: white;
+    opacity: 70%;
+}
+
+.createMileInput {
+    width: 80%;
+    text-align: center;
+    background-color: lightgray;
+    border: lightgray;
+    font-size: 20px;
+}
+
+.createMileFormLabel {
+    font: 36px "Ramaraja";
+    border: 7px solid white;
+    background-color: #45C8D9;
+    width: 80%;
+    text-align: left;
+}

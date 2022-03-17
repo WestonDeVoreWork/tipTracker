@@ -1,0 +1,16 @@
+.mainDivNav {
+    background-color: #29B6C9 ;
+    text-align: center;
+}
+
+.mainDivNav a {
+    color: black;
+    text-decoration: none;
+    font: 25px "Ramaraja";
+    /* justify-content: center; */
+}
+
+.mainDivNav a:hover {
+    color: white;
+    text-decoration: underline;
+}
